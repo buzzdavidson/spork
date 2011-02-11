@@ -1,3 +1,33 @@
 NOTE, WARNING, DANGER!!!
 
 This is a preliminary release, and needs cleanup.  I'll get to it, honest.  Committed in this initial state in case my server loses its mind.  Please contact me directly if you have any interest in this project whatsoever.
+
+Usage: spork.jar [options]
+
+Where [options] are either:
+	-help                Application Usage
+	-writeConfig [file]  Write a new configuration file and exit
+	-config [file]       Load configuration from file
+
+Or a combination of the following:
+--------------------------------------------------------
+General Configuration Entries - these MUST be configured
+--------------------------------------------------------
+	-serverHost [value]          Fully qualified hostname of OWA server
+	-authDomain [value]          NT Domain name for authentication
+-----------------------------------------------------------------------------
+Miscellaneous Configuration Entries - you probably don't need to change these
+-----------------------------------------------------------------------------
+	-port [value]                Port for local POP server (Default 8110)
+	-publicComputer [value]      Should be 'true' if public computer (controls OWA session timeout) (Default false)
+	-itemFetchLimit [value]      Maximum number of entries to fetch at one time (Default 25)
+	-diagnostics [value]         Include diagnostic footer in each message (Default false)
+-------------------------------------------------------------------------------------
+Advanced Configuration Entries - Don't change these unless you know what you're doing
+-------------------------------------------------------------------------------------
+	-scheme [value]              URL Scheme (http or https) (Default https)
+	-loginPath [value]           Path to login URL - check form 'action' parameter on outlook web login page source (Default exchweb/bin/auth/owaauth.dll)
+	-docBasePath [value]         OWA base path (Default exchange)
+	-authHost [value]            NT Authentication Host (Default localhost)
+	-markReadAfterFetch [value]  Mark messages read when retrieved (Default true) - leave this alone unless debugging
+C
