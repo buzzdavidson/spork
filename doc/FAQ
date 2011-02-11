@@ -1,0 +1,3 @@
+Q.  Maven builds take forever because of a dependency called 'aspirin-core'
+A.  You may need to install this into your local repository.  Use command
+mvn install:install-file -DgroupId=org.masukomi -DartifactId=aspirin-core -Dversion=1.0 -Dfile=aspirin-core-1.0.jar -DgeneratePom=true -Dpackaging=jar
